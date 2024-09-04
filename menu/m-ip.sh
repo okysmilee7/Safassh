@@ -58,7 +58,7 @@ END='\e[0m'
 AKTIF="VERIFIED"
 TOKEN=$(cat /etc/github/api)
 REPO="https://github.com/okysmilee7/Permission.git"
-EMAIL="safatrader88@gmail.com"
+EMAIL="okysmilee7@gmail.com"
 USER="okysmilee7"
 # linkinstal= https://justpaste.it/edit/62611736/yu5zlvfdabupd00t
 
