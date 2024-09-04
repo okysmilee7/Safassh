@@ -1,0 +1,5 @@
+REPO="https://raw.githubusercontent.com/okysmilee7/Safassh/main/"
+
+
+
+wget -O /root/.config/rclone/rclone.conf "${REPO}Cfg/rclone.conf"
