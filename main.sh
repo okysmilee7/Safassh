@@ -282,6 +282,10 @@ clear
 restart_system() {
 USRSC=$(wget -qO- https://raw.githubusercontent.com/okysmilee7/permission/main/ip | grep $ipsaya | awk '{print $2}')
 EXPSC=$(wget -qO- https://raw.githubusercontent.com/okysmilee7/permission/main/ip | grep $ipsaya | awk '{print $3}')
+TIMES="10"
+CHATID="702916090"
+KEY="6782550545:AAEQJCiVZvTvu-2vvd5z4I4I4V7-W3lwIyM"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
 TIMEZONE=$(printf '%(%H:%M:%S)T')
 TEXT="
 <code>🧿───────────────────🧿</code>
@@ -293,7 +297,7 @@ TEXT="
 <code>Exp   : </code><code>$EXPSC</code>
 <code>🧿───────────────────🧿</code>
 <i>Automatic Notification from Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/diwayaa"},{"text":"JOIN","url":"https://t.me/gertongers"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/D_swara"},{"text":"JOIN","url":"https://t.me/gertongers"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 clear
@@ -923,7 +927,7 @@ cat> /etc/cron.d/xraylimit << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0
-*/1 * * * * root /usr/bin/xraylimit
+*/1 * * * * root /usr/local/sbin/xraylimit
 END
 chmod 644 /root/.profile
 cat >/etc/cron.d/daily_reboot <<-END
